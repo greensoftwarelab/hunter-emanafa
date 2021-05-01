@@ -27,34 +27,30 @@ dependencies {
 }
 
 ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'hunter-debug-library'
-
-    publishedGroupId = 'com.quinn.hunter'
+    publishedGroupId = 'io.github.raphael28'
     libraryName = 'hunter-debug-library'
     artifact = 'hunter-debug-library'
 
-    libraryDescription = 'A fast, incremental, cocurrent framework to develop compile plugin for android project'
+    libraryDescription = 'A plugin to measure times and trace your application'
 
-    siteUrl = 'https://github.com/Leaking/Hunter'
-    gitUrl = 'https://github.com/Leaking/Hunter.git'
+    siteUrl = 'https://github.com/raphael28/hunter-custom-debug'
+    gitUrl = 'https://github.com/raphael28/hunter-custom-debug.git'
 
-    libraryVersion = '0.9.6'
+    libraryVersion = '0.9.7'
 
-    developerId = 'Leaking'
-    developerName = 'QuinnChen'
-    developerEmail = 'chenhuazhaoao@gmail.com'
+    developerId = 'raphael'
+    developerName = 'Raphael'
+    developerEmail = 'raphinha_31@hotmail.com'
 
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
     allLicenses = ["Apache-2.0"]
 }
 
-//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+apply from: '../deploy.gradle'
 
-//publish script for debug mode
-
+/*
+// local repository
 apply plugin: 'maven'
 
 group='com.hunter.spell'
@@ -69,3 +65,4 @@ uploadArchives {
         }
     }
 }
+*/
