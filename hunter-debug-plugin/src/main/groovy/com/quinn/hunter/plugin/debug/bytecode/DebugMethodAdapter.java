@@ -64,7 +64,7 @@ public final class DebugMethodAdapter extends LocalVariablesSorter implements Op
 
         //Timing
         timingStartVarIndex = newLocal(Type.LONG_TYPE);
-        mv.visitMethodInsn(Opcodes.INVOKESTATIC, "java/lang/System", "nanoTime", "()J", false);
+        mv.visitMethodInsn(Opcodes.INVOKESTATIC, "java/lang/System", "currentTimeMillis", "()J", false);
         mv.visitVarInsn(Opcodes.LSTORE, timingStartVarIndex);
         mv.visitLdcInsn(className);
         mv.visitLdcInsn(methodName);
@@ -130,7 +130,7 @@ public final class DebugMethodAdapter extends LocalVariablesSorter implements Op
             int finalCPU = cpu + 10;
 
             //parameter1 parameter2
-            mv.visitMethodInsn(INVOKESTATIC, "java/lang/System", "nanoTime", "()J", false);
+            mv.visitMethodInsn(INVOKESTATIC, "java/lang/System", "currentTimeMillis", "()J", false);
             // mv.visitVarInsn(LLOAD, timingStartVarIndex);
             // mv.visitInsn(LSUB);
             int index = newLocal(Type.LONG_TYPE);

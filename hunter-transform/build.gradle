@@ -31,7 +31,7 @@ ext {
     siteUrl = 'https://github.com/raphael28/hunter-custom-debug'
     gitUrl = 'https://github.com/raphael28/hunter-custom-debug.git'
 
-    libraryVersion = '0.9.4'
+    libraryVersion = '0.9.5'
 
     developerId = 'raphael28'
     developerName = 'Raphael'
