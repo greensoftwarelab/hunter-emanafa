@@ -2,9 +2,30 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.hunter.spell</groupId>
+  <groupId>io.github.raphael28</groupId>
   <artifactId>hunter-debug-plugin</artifactId>
-  <version>0.9.6</version>
+  <version>0.9.7</version>
+  <name>hunter-debug-plugin</name>
+  <description>A plugin to measure times and trace your application</description>
+  <url>https://github.com/raphael28/hunter-custom-debug</url>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>raphael</id>
+      <name>Raphael</name>
+      <email>raphinha_31@hotmail.com</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>https://github.com/raphael28/hunter-custom-debug.git</connection>
+    <developerConnection>https://github.com/raphael28/hunter-custom-debug.git</developerConnection>
+    <url>https://github.com/raphael28/hunter-custom-debug</url>
+  </scm>
   <dependencies>
     <dependency>
       <groupId>com.android.tools.build</groupId>

@@ -1,3 +1,28 @@
 # misc
 .DS_Store
 
+# maven upload
+native/*
+notifications/*
+
+# properties security
+gradle.properties
+local.properties
+
+# gradle
+.gradle/*
+.idea/*
+caches/*
+daemon/*
+
+# build
+hunter-debug-library/build/*
+hunter-debug-plugin/build/*
+hunter-transform/build/*
+
+
+
+
+
+
+
