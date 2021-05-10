@@ -53,12 +53,15 @@ public class DebugPreGoMethodAdapter extends MethodVisitor implements Opcodes {
     @Override
     public void visitLocalVariable(String name, String desc, String signature, Label start, Label end, int index) {
         if(!"this".equals(name) && start == labelList.get(0) && needParameter) {
-            Type type = Type.getType(desc);
+            // Type type = Type.getType(desc);
+            /*
             if(type.getSort() == Type.OBJECT || type.getSort() == Type.ARRAY) {
                 parameters.add(new Parameter(name, "Ljava/lang/Object;", index));
             } else {
                 parameters.add(new Parameter(name, desc, index));
             }
+             */
+            parameters.add(new Parameter(name, desc, index));
         }
         super.visitLocalVariable(name, desc, signature, start, end, index);
     }
