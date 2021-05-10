@@ -27,7 +27,8 @@ public class ParameterPrinter {
 
     public ParameterPrinter addType(String type){
         paramIndex++;
-        types.add(type);
+        String [] finalType = type.split("[/;]");
+        types.add(finalType[finalType.length - 1]);
         return this;
     }
 
@@ -132,10 +133,15 @@ public class ParameterPrinter {
  */
 
     public void print(){
-        int hashCode = types.hashCode();
-        String previousResult = result.toString();
+        String totalString = "";
+        for(String type: types){
+            totalString += type;
+        }
+        int hashCode = totalString.toLowerCase().hashCode();
 
+        String previousResult = result.toString();
         String [] components = previousResult.split("\\[");
+
         String functionName = components[0].replace(" ","_" + hashCode);
         String finalResult = functionName + " [" + components[1] + "]";
 

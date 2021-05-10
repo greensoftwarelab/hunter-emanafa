@@ -19,12 +19,19 @@ public class ResultPrinter {
 
     public ResultPrinter addType(String type){
         paramIndex++;
-        types.add(type);
+        String [] finalType = type.split("[/;]");
+        types.add(finalType[finalType.length - 1]);
         return this;
     }
 
     public void print(String className, String methodName, int cpu, long costedMilles) {
-        int hashCode = types.hashCode();
+        //int hashCode = types.hashCode();
+        String totalString = "";
+        for(String type: types){
+            totalString += type;
+        }
+        int hashCode = totalString.toLowerCase().hashCode();
+
         Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName + '_' + hashCode, cpu + "", costedMilles + ""));
     }
 
