@@ -21,6 +21,7 @@ repositories {
     mavenCentral()
 }
 
+
 ext {
     publishedGroupId = 'io.github.raphael28'
     libraryName = 'hunter-transform'
@@ -31,7 +32,7 @@ ext {
     siteUrl = 'https://github.com/raphael28/hunter-custom-debug'
     gitUrl = 'https://github.com/raphael28/hunter-custom-debug.git'
 
-    libraryVersion = '0.9.5'
+    libraryVersion = '0.9.6'
 
     developerId = 'raphael28'
     developerName = 'Raphael'
@@ -60,5 +61,4 @@ uploadArchives {
         }
     }
 }
-
  */
