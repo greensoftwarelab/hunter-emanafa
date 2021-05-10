@@ -33,7 +33,7 @@ ext {
     siteUrl = 'https://github.com/raphael28/hunter-custom-debug'
     gitUrl = 'https://github.com/raphael28/hunter-custom-debug.git'
 
-    libraryVersion = '0.9.8'
+    libraryVersion = '0.9.9'
 
     developerId = 'raphael'
     developerName = 'Raphael'
@@ -62,5 +62,4 @@ uploadArchives {
         }
     }
 }
-
  */

@@ -1,49 +1,77 @@
 package com.hunter.library.debug;
 
 import android.util.Log;
+import org.apache.commons.lang3.AnnotationUtils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ResultPrinter {
 
-    public static void print(String className, String methodName, int cpu, long costedMilles, byte returnVal) {
-        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName, cpu + "", costedMilles + "", returnVal + ""));
+    private int paramIndex = 0;
+    private List<String> types = new ArrayList<>();
+
+
+    public ResultPrinter(){
+
     }
 
-    public static void print(String className, String methodName, int cpu, long costedMilles, char returnVal) {
-        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName, cpu + "", costedMilles + "", returnVal + ""));
+    public ResultPrinter addType(String type){
+        paramIndex++;
+        types.add(type);
+        return this;
     }
 
-    public static void print(String className, String methodName, int cpu, long costedMilles, short returnVal) {
-        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName, cpu + "", costedMilles + "", returnVal + ""));
+    public void print(String className, String methodName, int cpu, long costedMilles) {
+        int hashCode = types.hashCode();
+        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName + '_' + hashCode, cpu + "", costedMilles + ""));
     }
 
-    public static void print(String className, String methodName, int cpu, long costedMilles, int returnVal) {
-        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName, cpu + "", costedMilles + "", returnVal + ""));
+    /*
+    public void print(String className, String methodName, int cpu, long costedMilles, byte returnVal) {
+        int hashCode = types.hashCode();
+        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName + '_' , cpu + "", costedMilles + ""));
     }
 
-    public static void print(String className, String methodName, int cpu, long costedMilles, boolean returnVal) {
-        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName, cpu + "", costedMilles + "", returnVal + ""));
+    public void print(String className, String methodName, int cpu, long costedMilles, char returnVal) {
+        int hashCode = types.hashCode();
+        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName + '_' , cpu + "", costedMilles + ""));
     }
 
-    public static void print(String className, String methodName, int cpu, long costedMilles, long returnVal) {
-        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName, cpu + "", costedMilles + "", returnVal + ""));
+    public void print(String className, String methodName, int cpu, long costedMilles, short returnVal) {
+        int hashCode = types.hashCode();
+        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName + '_', cpu + "", costedMilles + ""));
     }
 
-    public static void print(String className, String methodName, int cpu, long costedMilles, float returnVal) {
-        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName, cpu + "", costedMilles + "", returnVal + ""));
+    public void print(String className, String methodName, int cpu, long costedMilles, int returnVal) {
+        int hashCode = types.hashCode();
+        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName + '_', cpu + "", costedMilles + ""));
     }
 
-    public static void print(String className, String methodName, int cpu, long costedMilles, double returnVal) {
-        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName, cpu + "", costedMilles + "", returnVal + ""));
+    public void print(String className, String methodName, int cpu, long costedMilles, boolean returnVal) {
+        int hashCode = types.hashCode();
+        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName + '_', cpu + "", costedMilles + ""));
     }
 
-    public static void print(String className, String methodName, int cpu, long costedMilles, Object returnVal) {
-        if(returnVal != null && returnVal.getClass().isArray()){
-            Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName, cpu + "", costedMilles + "", arrayToString(returnVal)));
-        } else {
-            Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName, cpu + "", costedMilles + "", returnVal));
-        }
+    public void print(String className, String methodName, int cpu, long costedMilles, long returnVal) {
+        int hashCode = types.hashCode();
+        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName + '_', cpu + "", costedMilles + ""));
+    }
+
+    public void print(String className, String methodName, int cpu, long costedMilles, float returnVal) {
+        int hashCode = types.hashCode();
+        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName + '_', cpu + "", costedMilles + ""));
+    }
+
+    public void print(String className, String methodName, int cpu, long costedMilles, double returnVal) {
+        int hashCode = types.hashCode();
+        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName + '_', cpu + "", costedMilles + ""));
+    }
+
+    public void print(String className, String methodName, int cpu, long costedMilles, Object returnVal) {
+        int hashCode = types.hashCode();
+        Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName + '_', cpu + "", costedMilles + ""));
     }
 
     public static void printWithCustomLogger(String className, String methodName, int cpu, long costedMilles, byte returnVal) {
@@ -111,5 +139,7 @@ public class ResultPrinter {
             return Arrays.deepToString((Object[])val);
         }
     }
+
+     */
 
 }
