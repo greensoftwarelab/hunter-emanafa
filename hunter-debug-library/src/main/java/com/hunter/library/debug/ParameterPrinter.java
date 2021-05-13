@@ -137,7 +137,7 @@ public class ParameterPrinter {
         for(String type: types){
             totalString += type;
         }
-        int hashCode = totalString.toLowerCase().hashCode();
+        int hashCode = Math.abs(totalString.toLowerCase().hashCode());
 
         String previousResult = result.toString();
         String [] components = previousResult.split("\\[");

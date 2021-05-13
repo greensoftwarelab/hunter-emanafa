@@ -25,12 +25,11 @@ public class ResultPrinter {
     }
 
     public void print(String className, String methodName, int cpu, long costedMilles) {
-        //int hashCode = types.hashCode();
         String totalString = "";
         for(String type: types){
             totalString += type;
         }
-        int hashCode = totalString.toLowerCase().hashCode();
+        int hashCode = Math.abs(totalString.toLowerCase().hashCode());
 
         Log.i(className, String.format(Constants.RETURN_PRINT_FORMAT, className + '_' + methodName + '_' + hashCode, cpu + "", costedMilles + ""));
     }
