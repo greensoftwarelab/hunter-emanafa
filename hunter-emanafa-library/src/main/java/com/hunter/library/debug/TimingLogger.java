@@ -1,4 +1,4 @@
-package com.hunter.emanafa.library.debug;
+package com.hunter.library.debug;
 
 import java.util.ArrayList;
 

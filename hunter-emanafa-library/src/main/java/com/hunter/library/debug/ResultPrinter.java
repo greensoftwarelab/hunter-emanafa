@@ -1,4 +1,4 @@
-package com.hunter.emanafa.library.debug;
+package com.hunter.library.debug;
 
 import android.util.Log;
 
@@ -19,7 +19,7 @@ public class ResultPrinter {
         int hashCode = Math.abs(types.toString().toLowerCase().hashCode());
         StringBuilder sb = new StringBuilder();
         // "<%s [%s]";
-        sb.append("<").append(className).append("_").append(methodName).append("_").append(hashCode).append(" [").append(costedMilles).append("]");
+        sb.append("<").append(className).append("_").append(methodName).append("_").append(hashCode).append("[").append(costedMilles); // .append("]");
         Log.i(className, sb.toString());
     }
 }

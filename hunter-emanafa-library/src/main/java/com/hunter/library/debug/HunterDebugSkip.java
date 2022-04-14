@@ -1,10 +1,12 @@
-package com.hunter.emanafa.library.debug;
+package com.hunter.library.debug;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target({ElementType.TYPE}) @Retention(RetentionPolicy.CLASS)
-public @interface HunterEMANAFAClass {
+
+
+@Target({ElementType.METHOD}) @Retention(RetentionPolicy.CLASS)
+public @interface HunterDebugSkip {
 }

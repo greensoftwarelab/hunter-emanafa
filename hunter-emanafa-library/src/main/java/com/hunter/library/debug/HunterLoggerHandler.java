@@ -1,4 +1,5 @@
-package com.hunter.emanafa.library.debug;
+package com.hunter.library.debug;
+
 import android.util.Log;
 
 /**
@@ -11,10 +12,12 @@ public class HunterLoggerHandler {
     }
 
     public static HunterLoggerHandler DEFAULT_IMPL = new HunterLoggerHandler() {
+
         @Override
         public void log(String tag, String msg) {
             Log.i(tag, msg);
         }
+
     };
 
     public static HunterLoggerHandler CUSTOM_IMPL = DEFAULT_IMPL;
