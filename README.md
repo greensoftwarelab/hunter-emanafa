@@ -16,7 +16,14 @@ If you want to use this library in your Android application, perform the followi
 
  a) Gradle
 ```
-implementation "io.github.greensoftwarelab:hunter-emanafa-library:1.0.1"
+plugins {
+    ....
+    id 'hunter-debug'
+}
+dependencies {
+    implementation "io.github.greensoftwarelab:hunter-emanafa-library:1.0.1"
+    ....
+}
 ```
  b) Maven
 ```
