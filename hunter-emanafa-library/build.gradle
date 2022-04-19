@@ -27,16 +27,16 @@ dependencies {
 }
 
 ext {
-    publishedGroupId = 'io.github.greenlab'
+    publishedGroupId = 'io.github.greensoftwarelab'
     libraryName = 'hunter-emanafa-library'
     artifact = 'hunter-emanafa-library'
 
     libraryDescription = 'A plugin to perform method-level instrumentation of Android apps in order to obtain method traces'
 
-    siteUrl = 'https://github.com/greenlab/hunter-emanafa'
-    gitUrl = 'https://github.com/greenlab/hunter-emanafa.git'
+    siteUrl = 'https://github.com/greensoftwarelab/hunter-emanafa'
+    gitUrl = 'https://github.com/greensoftwarelab/hunter-emanafa.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     developerId = 'greenlab'
     developerName = 'GreenSoftwareLab'

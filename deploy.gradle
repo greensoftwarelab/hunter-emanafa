@@ -28,8 +28,7 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 }
 
 artifacts {
-    archives javadocJar
-    archives sourcesJar
+    archives javadocJar, sourcesJar
 }
 
 // Maven
@@ -48,7 +47,6 @@ uploadArchives {
             repository(url: "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/") {
                 authentication(userName: properties.getProperty("ossrhUsername"), password: properties.getProperty("ossrhPassword"))
             }
-
             snapshotRepository(url: "https://s01.oss.sonatype.org/content/repositories/snapshots/") {
                 authentication(userName: properties.getProperty("ossrhUsername"), password: properties.getProperty("ossrhPassword"))
             }
